@@ -22,23 +22,7 @@ public class Book {
 		
 	}
 
-	public  List<Kutuphane> kitapEkle() {
-		Scanner scan=new Scanner(System.in);
-		
-		System.out.println("Lutfen kitap adi giriniz");
-		String kitapAdi= scan.nextLine();
-		
-		
-		System.out.println("Lutfen yazar adi giriniz");
-		String yazarAdi= scan.nextLine();
-		
-		System.out.println("Lutfen kitabin fiyatini giriniz");
-		double kitapFiyati=scan.nextDouble();
-		
-		Book kitap=new Book ();
-		
-		return kitap;
-	}
+	
  
 }	
 

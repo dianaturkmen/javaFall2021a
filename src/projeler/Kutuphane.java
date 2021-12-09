@@ -6,11 +6,13 @@ import java.util.Scanner;
 
 public class Kutuphane {
 	List<Book> kitaplar = new ArrayList<>();
-    Scanner scan = new Scanner(System.in);
+    
+    
 	public List<Book> kitapEkle(long kitapNo) {
-
+		Scanner scan = new Scanner(System.in);
 		System.out.println("Lutfen kitap adi giriniz");
 		String kitapAdi = scan.nextLine();
+		
 		System.out.println("Lutfen yazar adi giriniz");
 		String yazarAdi = scan.nextLine();
 
@@ -32,6 +34,7 @@ public class Kutuphane {
 	}
 
 	public void adiIleArama (List<Book> kitaplar) {
+		Scanner scan = new Scanner(System.in);
 		System.out.println("Lutfen aranan kitap adini giriniz");
 		String kitapAdi = scan.nextLine();
 		
@@ -43,5 +46,34 @@ public class Kutuphane {
 			
 		}
 	}
+		public void noIleArama (List<Book> kitaplar) {
+			Scanner scan = new Scanner(System.in);
+			System.out.println("Lutfen aranan kitap no'sunu giriniz");
+			String kitapNo = scan.nextLine();
+			
+			for (Book each :kitaplar) {
+				if(kitapNo.equals(each.kitapNo)) {
+					System.out.println("KitapNo  " +each.kitapNo.toString()+"  Kitap Adi  "+" "+ each.kitapAdi+ " "+"  Yazar Adi  "+ " "+each.yazarAdi+"  Kitap Fiyati  " 
+									+" "+each.kitapFiyati);
+				}
+				
+			}
+			}	
+			
+			public  List<Book> noIleSilme (List<Book> kitaplar) {
+				Scanner scan = new Scanner(System.in);
+				System.out.println("Lutfen silmek istediginiz kitap no'sunu giriniz");
+				long kitapNo = scan.nextLong();
+				
+				for (Book each :kitaplar) {
+					if(kitapNo==(each.kitapNo)) {
+						kitaplar.remove(each);
+						
+					}
+					
+				}	
+			return kitaplar;	
+			
+			}
 	
 }

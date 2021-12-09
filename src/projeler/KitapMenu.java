@@ -49,10 +49,20 @@ public class KitapMenu {
 			menu = scan.nextLine();
 			switch (menu) {
 			case "1":
-				
 				kitaplar=kutuphane.kitapEkle(sayac);
 			    sayac++;
 				break;
+				
+			case "3":
+				kutuphane.adiIleArama(kitaplar);
+				break;
+			case "2":
+				kutuphane.noIleArama(kitaplar);
+				break;
+			case "4":
+				kutuphane.noIleSilme(kitaplar);
+				break;	
+				
 			case "5":
 				System.out.println("Kitap Listesi");
 				kutuphane.listele(kitaplar);
